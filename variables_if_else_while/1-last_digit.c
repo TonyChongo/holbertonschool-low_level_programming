@@ -3,10 +3,10 @@
 #include <time.h>
 
 /**
- * main - Engtry point
- *
- * Return: Always 0 (Success)
- */
+* main - Engtry point
+*
+* Return: Always 0 (Success)
+*/
 
 int main(void)
 {
@@ -21,6 +21,6 @@ int main(void)
 		printf("Last digit of %d is %d and is 0\n", n, n % 10);
 	else
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 10);
-	
+
 	return (0);
 }
