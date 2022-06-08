@@ -1,0 +1,19 @@
+#include "main.h"
+
+/**
+ * print_last_digit - prints the last digit of a number.
+ * @l: An integre input
+ * Return: last digit of number l
+ */
+int print_last_digit(int l)
+{
+	int s;
+
+	if (l < 0)
+		s = -1 * (l % 10);
+	else
+		s = l % 10;
+
+	_putchar((s % 10) + '0');
+	return (s % 10);
+}
