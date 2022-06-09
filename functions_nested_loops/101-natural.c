@@ -14,7 +14,7 @@ int main(void)
 		if ((m % 3) == 0 || (m % 5) == 0)
 			sum += 1;
 	}
-	printf("\n", sum);
+	printf("%d\n", sum);
 
 	return (0);
 }
