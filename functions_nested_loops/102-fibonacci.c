@@ -10,7 +10,7 @@ int main(void)
 	int count;
 	unsigned long fib1 = 0, fib2 = 0, mab;
 
-	for (count = 0, count < 50, count++)
+	for (count = 0; count < 50; count++)
 	{
 		mab = fib1 + fib2;
 		printf("%lu", mab);
@@ -19,7 +19,7 @@ int main(void)
 		fib2 = mab;
 
 		if (count == 49)
-			printf('"\n");
+			printf("\n");
 		else
 			printf(", ");
 	}
