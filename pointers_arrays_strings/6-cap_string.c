@@ -29,7 +29,6 @@ char *cap_string(char *k)
 				k[in - 1] == '}' ||
 				in == 0)
 			k[in] -= 32;
-
 		in++;
 	}
 	return (k);
