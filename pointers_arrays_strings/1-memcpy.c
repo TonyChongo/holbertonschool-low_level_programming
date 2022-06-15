@@ -2,9 +2,9 @@
 
 /**
  * _memcpy - Write a function that copies memory area.
- * @dest:
- * @src:
- * @n:
+ * @dest: A destionation memory
+ * @src: Source of memory
+ * @n: A bytes file
  * Return: A pointer to dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
