@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strstr - Write a function that locates a substring.
@@ -14,7 +15,7 @@ char *_strstr(char *haystack, char *needle)
 	while (*haystack)
 	{
 		l = haystack;
-		i = needle;
+		needle = i;
 		while (*haystack == *needle)
 		{
 			haystack++;
