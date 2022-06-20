@@ -9,4 +9,5 @@ int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int sqrt2(int a, int b);
 int is_prime_number(int n);
+int prime2(int a, int b);
 
