@@ -6,7 +6,7 @@
  * @b: Number that iterates from 1 to n
  * Return: on success 1, on error -1.
  */
-int sqrt2*(int a, int b)
+int sqrt2(int a, int b)
 {
 	if (b * b == a)
 		return (b);
