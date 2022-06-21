@@ -2,8 +2,8 @@
 
 /**
  * main - Write a program that prints the number of arguments passed into it
- * @argc:
- * @argv:
+ * @argc: An integer type of argument pointer
+ * @argv: An array of character pointer
  * Return: Always 0.
  */
 int main(int argc, char __attribute__((unused)) *argv[])
