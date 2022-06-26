@@ -4,7 +4,7 @@
 
 /**
  * malloc_checked - Write a function that allocates memory using malloc
- * @s:
+ * @s: A pointer to allocate address
  * Return: Nothing.
  */
 
@@ -14,6 +14,6 @@ void *malloc_checked(unsigned int b)
 
 	q = malloc(b);
 	if (q == NULL)
-		exit(b);
+		exit(98);
 	return (q);
 }
