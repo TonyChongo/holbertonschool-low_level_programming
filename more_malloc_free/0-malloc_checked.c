@@ -4,7 +4,7 @@
 
 /**
  * malloc_checked - Write a function that allocates memory using malloc
- * @s: A pointer to allocate address
+ * @b: A pointer to allocate address
  * Return: Nothing.
  */
 
