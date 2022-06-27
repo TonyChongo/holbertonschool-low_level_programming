@@ -3,9 +3,9 @@
 
 /**
  * string_nconcat - Write a function that concatenates two strings
- * @s1:
- * @s2:
- * @n
+ * @s1: First string
+ * @s2: Second string
+ * @n:  bytes of s2
  * Return: NULL if function fails.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -22,8 +22,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 	for (j = 0; s2[j] != '\0'; j++)
 		;
+
 	if (n > j)
 		n = j;
+
 	k = i + n;
 
 	cc = malloc(k + 1);
