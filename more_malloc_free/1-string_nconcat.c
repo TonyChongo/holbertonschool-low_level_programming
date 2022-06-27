@@ -24,21 +24,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 
 	if (n > j)
-		n = j;
-
-	k = i + n;
-
-	cc = malloc(k + 1);
+		cc = malloc((i + j + 1) * sizeof(char));
+	else
+		cc = malloc((i + n + 1) * sizeof(char));
 	if (cc == NULL)
 		return (NULL);
 
-	for (l = 0; l < k; l++)
-		if (l < i)
-			cc[l] = s1[l];
-		else
-			cc[l] = s2[l - i];
+	for (k = 0; k < i; k++)
+		cc[k] = s1[k];
+	for (l = 0; l < n && l < j; l++, k++)
+		cc[k] = s2[l];
 
-	cc[l] = '\0';
+	cc[k] = '\0';
 
 	return (cc);
 }
