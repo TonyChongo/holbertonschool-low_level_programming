@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
 	}
 
 	opera = get_op_func(argv[2]);
+	i = atoi(argv[1]);
+	j = atoi(argv[3]);
 
 	if (opera == NULL)
 	{
@@ -32,8 +34,11 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	i = atoi(argv[1]);
-	j = atoi(argv[3]);
+	if ((argv[2][0] == '%' || argv [2][0] == '/') && atoi(argv[3]) == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 
 	printf("%d\n", opera(i, j));
 	return (0);
