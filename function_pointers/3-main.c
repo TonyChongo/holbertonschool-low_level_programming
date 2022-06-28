@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	i = atoi(argv[1]);
 	j = atoi(argv[3]);
 
-	if ((opera == NULL) && (argv[2][1]))
+	if ((opera == NULL) || (argv[2][1]))
 	{
 		printf("Error\n");
 		exit(99);
