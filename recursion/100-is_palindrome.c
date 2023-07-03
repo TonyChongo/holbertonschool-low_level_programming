@@ -10,8 +10,11 @@
 
 int is_palindrome(char *s)
 {
-	int length = strlen(s);
+	int length = 0;
 	int i, j;
+
+	while (s[length] != '\0')
+		length++;
 
 	for (i = 0, j = length - 1; i < j; i++, j--)
 	{
