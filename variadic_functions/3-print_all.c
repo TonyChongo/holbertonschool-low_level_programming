@@ -10,48 +10,44 @@
  */
 void print_all(const char * const format, ...)
 {
-    va_list args;
-    va_start(args, format);
+	va_list p;
+	char *star;
+	int i = 0;
 
-    const char *p = *format;
-    int count = 0;
-
-    while (*p != '\0')
-    {
-        if (count > 0)
-            printf(", ");
-
-        if (*p == 'c')
-        {
-            char c = va_arg(args, int);
-            printf("%c", c);
-            count++;
-        }
-        else if (*p == 'i')
-        {
-            int i = va_arg(args, int);
-            printf("%d", i);
-            count++;
-        }
-        else if (*p == 'f')
-        {
-            double f = va_arg(args, double);
-            printf("%f", f);
-            count++;
-        }
-        else if (*p == 's')
-        {
-            char *s = va_arg(args, char *);
-            if (s != NULL)
-                printf("%s", s);
-            else
-                printf("(nil)");
-            count++;
-        }
-
-        p++;
-    }
-
-    va_end(args);
-    printf("\n");
+	va_start(p, format);
+	while (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
+	while (format[i])
+	{
+		switch (format[i])
+		{
+			case 'c':
+				printf("%c", (char) va_arg(p, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(p, int));
+				break;
+			case 'f':
+				printf("%f", (float) va_arg(p, double));
+				break;
+			case 's':
+				star = va_arg(p, char*);
+				if (star != NULL)
+				{
+					printf("%s", star);
+					break;
+				}
+				printf("(nil)");
+				break;
+		}
+		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || 
+            format[i] == 's') && format[(i + 1)] != '\0')
+			printf(", ");
+		i++;
+	}
+	va_end(p);
+	printf("\n");
 }
