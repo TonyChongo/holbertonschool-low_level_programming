@@ -1,0 +1,1 @@
+A hash function is a special type of function that takes an input of any size (like a file, password, or message) and produces a fixed-size output, called a hash value, hash code, or digest.
